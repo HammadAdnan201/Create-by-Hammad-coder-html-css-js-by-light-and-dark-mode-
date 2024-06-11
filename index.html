@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+        content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode</title> 
+    
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+    </script>
+    
+    <style>
+        body{
+        padding:10% 3% 10% 3%;
+        text-align:center;
+        }
+        img{
+            height:140px;
+                width:140px; 
+        }
+        h1{
+        color: #32a852;
+        }
+        .mode {
+            float:right;
+        }
+        .change {
+            cursor: pointer;
+            border: 1px solid #555;
+            border-radius: 40%;
+            width: 20px;
+            text-align: center;
+            padding: 5px;
+            margin-left: 8px;
+        }
+        .change:hover{
+            color: rgb(241, 130, 241);
+            background-color: black;
+        }
+        .dark{
+            background-color: #222;
+            color: #e6e6e6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mode">
+       <b>Dark mode:</b>            
+        <span class="change"><b>OFF</b></span>
+    </div>
+    
+    <div>
+        <h1>Hammad Developer</h1>
+        <p><b><i>I am a Software Developer!</i></b></p>
+
+        <h3>Malik Hammad Adnan</h3>
+        
+        <img src=
+"https://i.ibb.co/59sgLr4/Whats-App-Image-2024-05-20-at-16-12-12-38f78218.jpg">
+        <p>
+           <b> Click on the switch on top-right
+            to move to dark mode.
+        </p></b>
+
+    </div>
+    
+    <script>
+        $( ".change" ).on("click", function() {
+            if( $( "body" ).hasClass( "dark" )) {
+                $( "body" ).removeClass( "dark" );
+                $( ".change" ).text( "OFF" );
+            } else {
+                $( "body" ).addClass( "dark" );
+                $( ".change" ).text( "ON" );
+            }
+        });
+    </script>
+</body>
+</html>
